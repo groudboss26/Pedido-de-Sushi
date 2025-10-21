@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    box-sizing: content-box;
+    padding: 0;
+    
+}
+body{
+    background-image: url(/style/img/sushi.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+    
+}
+
+.hd-central{
+    height: 120px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    position: relative;
+    
+    
+}
+
+.hd-central > #finalizacao{
+    position: absolute;
+    right: 262px;
+    top: 90px;
+}
+
+#finalizacao > .final{
+
+    width: 116px;
+    height: 21px;
+    border-top : none;
+    border-bottom: none;
+    border-left: 1px solid black;
+    border-right : 1px solid black;
+    background-color: rgba(255, 255, 255, 0);
+
+}
+
+.hd-central > .ver-pedido{
+    position: absolute; 
+    top: 30px;
+    right: 114px;
+}
+
+.ver-pedido > button[type="button"]{
+    width: 82px;
+    height: 45px;
+    background-color: lightgreen;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+/* elemento de obsevar o pedido feito*/
+
+#father{
+    padding-top: 30px;
+    padding-left: 10px;
+    width: 600px;
+    height: 100%;
+    display: block;
+    position: absolute;
+    right: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.253);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-decoration: underline;
+    font-size: 20px;
+    background-color: rgba(240, 248, 255, 0.808);
+    
+}
+
+.gd-one{
+    margin-top: 30px;
+    width: 1320px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    text-align: center;
+    
+    
+
+}
+
+.hd-central > .menu{
+    position: absolute;
+    left: 690px;
+    top: 44px;
+    
+}
+
+.menu-pr > label[for='name'],label[for='telefone']{
+    padding-left: 16px;
+}
+
+.txt-form > span{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3ch;
+    padding: 1px;
+}
+
+.botao{
+    width: 100px;
+    background-color: rgb(235, 126, 37);
+    border: 1px solid black;
+}
+
+input[type = 'number']{
+    width: 206px;
+    background-color: rgba(255, 255, 255, 0.548);
+    border: 1px solid black;
+}
+.logo{
+    position: absolute;
+    top: -36px;
+    left: 211px;
+}

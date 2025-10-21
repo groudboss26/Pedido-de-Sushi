@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cliente</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/menuProduto.css">
+</head>
+
+<body>
+    
+    <header class="hd-central">
+
+        
+        <nav class="menu">
+            
+            <span class="menu-pr"><label for="name">Nome:</label> <input type="text" name="name" id="name"
+                autocomplete="off" placeholder="Nome:---" required> <label for="telefone">Telefone:</label> <input type="tel" name="telefone"
+                id="telefone" autocomplete="off" placeholder="(99)99999-9999" required></span>
+            </nav>
+            
+            <nav class="menu-produto">
+                <button type="button" onclick="carregamentoPagina('premiun.html')">Sushi Premium</button>
+            <button type="button" onclick="carregamentoPagina('sashimiPremium.html')">Sashimi Premium</button>
+            <button type="button" onclick="carregamentoPagina('hotPremium.html')">Hot Premium</button>
+            <button type="button" onclick="carregamentoPagina('index')">Sushi</button>
+            <button type="button" onclick="carregamentoPagina('sashimi.html')">Sashimi</button>
+            <button type="button" onclick="carregamentoPagina('uramaki.html')">Uramaki</button>
+            <button type="button" onclick="carregamentoPagina('maki.html')">Maki</button>
+            <button type="button" onclick="carregamentoPagina('temaki.html')">Temaki</button>
+        </nav>
+        
+        <div id="finalizacao"><button type="button" onclick="finalizar()" class="final">Finalizar</button></div>
+        <div class="logo"><img src="/style/img/Logotipo da comida de sushi _ Vetor Premium.png" alt="Logo" width="200" height="200"></div>
+        
+    </header>
+
+    <div id="father"></div>
+    <div id="mensagemGlobal"></div>
+    <div id="conteudoPrincipal">
+
+        <div class="gd-one" id="sushi">
+            
+            <div class="txt-form">
+                <span>sushi Atum</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiAtum" id="sushiAtum">
+                </div>
+                <br>
+                <div>
+
+                    <span>
+                        <button type="button" onclick="add('sushiAtum','sushi Atum')" class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiAtum','sushi Atum')" class="botao">Excluir</button>
+                    </span>
+
+                    
+                </div>
+            </div>
+            
+            <!-- produto sushi Ebi-->
+            
+            <div class="txt-form">
+                
+                <span>sushi Ebi</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiEbi" id="sushiEbi">
+                </div>
+                <br>
+                <div>
+
+                    <span>
+                        <button type="button" onclick="add('sushiEbi','sushi Ebi') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiEbi','sushi Ebi')" class="botao">Excluir</button>
+                    </span>
+
+                </div>
+                <br>
+
+
+            </div>
+
+            <!--sushi Kani-->
+            
+            <div class="txt-form">
+
+                <span>sushi Kani</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiKani" id="sushiKani">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('sushiKani','Sushi Kani') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiKani','Sushi Kani')" class="botao">Excluir</button>
+                    </span>
+                    
+                </div>
+                <br>
+
+
+            </div>
+
+            <!--Sushi Peixe Branco-->
+            
+            <div class="txt-form">
+
+                <span>sushi Peixe Branco</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiPeixeBranco" id="sushiPeixeBranco">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('sushiPeixeBranco','sushi Peixe Branco') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiPeixeBranco','sushi Peixe Branco')" class="botao">Excluir</button>
+                    </span>
+
+                </div>
+                <br>
+                
+
+            </div>
+            <!-- Sushi Salmão-->
+
+            <div class="txt-form">
+
+                <span>Sushi Salmão</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiSalmao" id="sushiSalmao">
+                </div>
+                <br>
+                <div>
+
+                    <span>
+                        <button type="button" onclick="add('sushiSalmao','Sushi Salmão') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiSalmao','Sushi Salmão')" class="botao">Excluir</button>
+                    </span>
+                    
+                </div>
+                <br>
+
+                
+            </div>
+            
+            <!-- Sushi skin-->
+            
+            <div class="txt-form">
+
+                <span>Sushi Skin</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiSkin" id="sushiSkin">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('sushiSkin','Sushi Skin') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiSkin','Sushi Skin')" class="botao">Excluir</button>
+                    </span>
+                    
+                </div>
+                <br>
+                
+                
+            </div>
+
+            <!-- Sushi Tilápia-->
+
+            <div class="txt-form">
+
+                <span>Sushi Tilápia</span>
+                <br><br>
+                <div>
+                    <input type="number" name="sushiTilapia" id="sushiTilapia">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('sushiTilapia','Sushi Tilápia') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('sushiTilapia','Sushi Tilápia')" class="botao">Excluir</button>
+                    </span>
+                    
+                </div>
+                <br>
+                
+                
+            </div>
+
+            <!-- Djow de salmão-->
+            
+            <div class="txt-form">
+
+                <span>Djow Salmão</span>
+                <br><br>
+                <div>
+                    <input type="number" name="djowSalmao" id="djowSalmao">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('djowSalmao','Djow Salmão') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('djowSalmao','Djow Salmão')" class="botao">Excluir</button>
+                    </span>
+                    
+                </div>
+                <br>
+
+
+            </div>
+
+            <!-- Djow Salmão com Geleia de pimenta-->
+
+            <div class="txt-form">
+
+                <span>Djow Geleia de Pimenta</span>
+                <br><br>
+                <div>
+                    <input type="number" name="djowGeleiaDePimenta" id="djowGeleiaDePimenta">
+                </div>
+                <br>
+                <div>
+
+                    <span>
+                        <button type="button" onclick="add('djowGeleiaDePimenta','Djow de Geleia de Pimenta') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('djowGeleiaDePimenta','Djow de Geleia de Pimenta')" class="botao">Excluir</button>
+                    </span>
+
+                </div>
+                <br>
+
+                
+            </div>
+
+            <!-- Djow Tilápia e Alho Poró-->
+            
+            <div class="txt-form">
+
+                <span>Djow Tilápia e alho Poró</span>
+                <br><br>
+                <div>
+                    <input type="number" name="djowTilapiaAlhoPoro" id="djowTilapiaAlhoPoro">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('djowTilapiaAlhoPoro','Djow Tilápia e Alho Poró') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('djowTilapiaAlhoPoro','Djow Tilápia e Alho Poró')" class="botao">Excluir</button>
+                    </span>
+                    
+                </div>
+                <br>
+
+                
+            </div>
+
+            <!-- Djow tilápia e limão Siciliano-->
+            
+            <div class="txt-form">
+
+                <span>Djow tilápia e Limão Siciliano</span>
+                <br><br>
+                <div>
+                    <input type="number" name="djowTilapiaLimaoSiciliano" id="djowTilapiaLimaoSiciliano">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('djowTilapiaLimaoSiciliano','Djow Tilápia de Limão Siciliano') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('djowTilapiaLimaoSiciliano','Djow Tilápia de Limão Siciliano')" class="botao">Excluir</button>
+                    </span>
+
+                </div>
+                <br>
+
+
+            </div>
+
+            <!-- Rigaware-->
+
+            <div class="txt-form">
+
+                <span>Rigaware</span>
+                <br><br>
+                <div>
+                    <input type="number" name="Rigaware" id="Rigaware">
+                </div>
+                <br>
+                <div>
+                    
+                    <span>
+                        <button type="button" onclick="add('Rigaware','Rigaware') " class="botao">Adicionar</button>
+                        <button type="button" onclick="excluir('Rigaware','Rigaware')" class="botao">Excluir</button>
+                    </span>
+
+                </div>
+                <br>
+
+
+            </div>
+
+            
+
+
+        </div>
+    </div>
+    
+    <script src="/src/java.js"></script>
+</body>
+
+</html>

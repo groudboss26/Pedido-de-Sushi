@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    box-sizing: content-box;
+    padding: 0;
+}
+
+.menu-produto{
+   position: relative;
+   top:81px;
+   text-align: center;
+
+
+    
+}
+
+.menu-produto > button{
+padding: 10px;
+background-color: rgba(255, 255, 255, 0);
+border: 1px solid rgba(73, 71, 71, 0.801);
+border-bottom: none;
+border-top: none;
+
+}
+button:hover{
+border: 1px solid rgba(212, 89, 89, 0.911);
+border-bottom: none;
+border-top: none;
+text-decoration: underline rgba(212, 89, 89, 0.911); 
+box-shadow: 4px 4px 0px black;
+}
