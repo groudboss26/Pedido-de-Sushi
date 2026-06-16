@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedido de Sushi</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <header class="app-header border-bottom">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid app-shell">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                    <img src="style/img/Logotipo da comida de sushi _ Vetor Premium.png" alt="Logo Lista de Pedido" width="100" height="100">
+                    <span>Lista de Pedido</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <form class="cliente-form row g-2 ms-lg-auto" id="clienteForm" autocomplete="off" novalidate>
+                        <div class="col-12 col-md-5">
+                            <label class="form-label" for="name">Nome</label>
+                            <input class="form-control" type="text" name="cliente_nome" id="name" autocomplete="off" placeholder="Nome do cliente" required>
+                        </div>
+                        <div class="col-12 col-md-5">
+                            <label class="form-label" for="telefone">Telefone</label>
+                            <input class="form-control" type="tel" name="cliente_telefone" id="telefone" autocomplete="off" placeholder="(99) 99999-9999" required>
+                        </div>
+                        <div class="col-12 col-md-2 d-grid align-self-end">
+                            <button class="btn btn-danger" type="submit">Finalizar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container-fluid app-shell py-4">
+        <div id="mensagemGlobal" class="alert d-none" role="alert"></div>
+
+        <div class="row g-4">
+            <aside class="col-12 col-lg-3">
+                <section class="panel">
+                    <h1>Pedidos de Sushi</h1>
+                    <div class="category-list nav nav-pills flex-lg-column gap-2" id="categoryMenu" role="tablist" aria-label="Categorias de produtos"></div>
+                </section>
+            </aside>
+
+            <section class="col-12 col-lg-6">
+                <div class="d-flex align-items-center justify-content-between gap-3 mb-3">
+                    <div>
+                        <p class="section-kicker mb-1">Categoria</p>
+                        <h2 class="mb-0" id="categoriaTitulo">Sushi</h2>
+                    </div>
+                    <span class="badge text-bg-warning" id="quantidadeProdutos">0 itens</span>
+                </div>
+                <div class="product-grid" id="produtosLista" aria-live="polite"></div>
+            </section>
+
+            <aside class="col-12 col-lg-3">
+                <section class="panel sticky-lg-top cart-panel">
+                    <div class="d-flex align-items-center justify-content-between gap-2 mb-3">
+                        <h2 class="panel-title mb-0">Pedido</h2>
+                        <button class="btn btn-sm btn-outline-secondary" type="button" id="limparPedido">Limpar</button>
+                    </div>
+                    <div id="carrinhoLista"></div>
+                    <div class="cart-total mt-3">
+                        <span>Total</span>
+                        <strong id="totalItens">0 unidade(s)</strong>
+                    </div>
+                </section>
+            </aside>
+        </div>
+    </main>
+
+    <div class="modal fade" id="pdfModal" tabindex="-1" aria-labelledby="pdfModalTitulo" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="pdfModalTitulo">Resumo do pedido em PDF</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="pdfPreview" class="pdf-preview"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-warning" id="novoPedido">Novo pedido</button>
+                    <button type="button" class="btn btn-danger" id="imprimirPdf">Salvar PDF / Imprimir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="privacy-banner" id="privacyBanner" role="dialog" aria-live="polite" aria-label="Aviso de privacidade">
+        <p>Utilizamos tecnologias de armazenamento temporario para gerenciar seu pedido. Ao continuar, voce concorda com nossa politica de privacidade.</p>
+        <button class="btn btn-warning" type="button" id="aceitarPrivacidade">Entendi</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="src/app.js"></script>
+</body>
+
+</html>
